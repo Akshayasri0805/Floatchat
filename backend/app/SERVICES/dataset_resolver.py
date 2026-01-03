@@ -7,9 +7,10 @@ def resolve_dataset(query: str) -> dict:
     """
     q = query.lower()
 
-    # Concept-style questions
+    # Concept-style questions (explanations, examples, general info)
     concept_triggers = [
-        "what is", "explain", "define", "meaning of", "how does"
+        "what is", "explain", "define", "meaning of", "how does",
+        "give a sample", "give an example", "show me", "tell me about"
     ]
     if any(t in q for t in concept_triggers):
         return {"type": "concept"}
